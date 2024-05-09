@@ -11,7 +11,7 @@ class PemesananTiket {
         String pemesan = input.nextLine();
 
         String jenisTiket = "";
-        System.out.println("Pilih jenis tiket: ");
+        System.out.println("Pilih jenis tiket: "); //menampilkan pilihan jenis tiket
         System.out.println("1. CAT 8");
         System.out.println("2. CAT 1");
         System.out.println("3. FESTIVAL");
@@ -21,7 +21,7 @@ class PemesananTiket {
         int pilihan = input.nextInt();
 
         
-        switch (pilihan) {
+        switch (pilihan) { //menentukan jenis tiket berdasarkan pilihan user
             case 1:
                 jenisTiket = "CAT 8";
                 break;
@@ -43,7 +43,7 @@ class PemesananTiket {
         }
 
         TiketKonser tiket = null;
-        switch (pilihan) {
+        switch (pilihan) { //membuat objek jenisTiket berdasarkan pilihan dari user
             case 1:
                 tiket = new CAT8();
                 break;
@@ -63,9 +63,9 @@ class PemesananTiket {
         
         input.close();
 
-        String kodeBooking = generateKodeBooking();
-        String tanggalPemesanan = getCurrentDate();
-        double totalHarga = tiket.harga();
+        String kodeBooking = generateKodeBooking(); //membuat kode pemesanan
+        String tanggalPemesanan = getCurrentDate(); //mengambil tanggal pemesanan
+        double totalHarga = tiket.harga();          //mendapatkan harga tiket sesuai dengan jenis yang dipilih
         
         System.out.println("\n----- Detail Pemesanan -----");
         System.out.println("Nama Pemesan: " + pemesan);
