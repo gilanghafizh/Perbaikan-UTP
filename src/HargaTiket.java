@@ -1,0 +1,4 @@
+interface HargaTiket {
+    double harga();
+ }
+ 
